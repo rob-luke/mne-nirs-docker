@@ -56,7 +56,7 @@ RUN conda install --yes \
 
 RUN pip install s3fs
 RUN pip install bokeh
-RUN pip install vtk pyvista pyvistaqt PyQt5 matplotlib nibabel joblib h5py jupyterlab
+RUN pip install vtk pyvista pyvistaqt PyQt5 matplotlib nibabel joblib h5py jupyterlab seaborn
 RUN pip install https://github.com/mne-tools/mne-python/archive/main.zip
 RUN pip install https://github.com/mne-tools/mne-nirs/archive/master.zip
 
