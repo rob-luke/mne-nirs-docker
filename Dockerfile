@@ -56,7 +56,9 @@ RUN conda install --yes \
 
 RUN pip install s3fs
 RUN pip install bokeh
-RUN pip install vtk pyvista pyvistaqt PyQt5 matplotlib nibabel joblib h5py mne
+RUN pip install vtk pyvista pyvistaqt PyQt5 matplotlib nibabel joblib h5py 
+RUN pip install https://github.com/mne-tools/mne-python/archive/main.zip
+RUN pip install https://github.com/mne-tools/mne-nirs/archive/master.zip
 
 # setup environment for mne
 # MNE_3D_OPTION_ANTIALIAS is needed to avoid blank screenshots.
