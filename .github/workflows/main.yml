@@ -47,4 +47,4 @@ jobs:
           ls
           
       - name: Run docker image
-        run: docker run `pwd`:/opt/app/examples mnetools/mne-python python /opt/app/examples/tests/test.py
+        run: docker run -v `pwd`:/opt/app/examples mnetools/mne-python python /opt/app/examples/tests/test.py
