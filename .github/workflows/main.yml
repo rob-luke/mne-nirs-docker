@@ -40,5 +40,11 @@ jobs:
       - name: Build docker image
         run: docker-compose build worker
 
+      - name: where am I?
+        shell: bash -el {0}
+        run: |
+          pwd
+          ls
+          
       - name: Run docker image
-        run: docker run -it -v `pwd`:/opt/app/examples mnetools/mne-python
+        run: docker run `pwd`:/opt/app/examples mnetools/mne-python python /opt/app/examples/tests/test.py
