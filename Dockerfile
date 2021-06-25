@@ -68,4 +68,6 @@ ENV \
     MNE_3D_BACKEND=pyvista \
     MNE_3D_OPTION_ANTIALIAS=false
 
+COPY examples /home/mne_user/examples
+
 ENTRYPOINT ["tini", "-g", "--", "/usr/bin/prepare.sh"]
