@@ -40,11 +40,8 @@ jobs:
       - name: Build docker image
         run: docker-compose build worker
 
-      - name: where am I?
-        shell: bash -el {0}
-        run: |
-          pwd
-          ls
+      - name: System info
+        run: docker run mnetools/mne-python python -c "import mne; mne.sys_info()"
           
-      - name: Run docker image
+      - name: Run visualisation test
         run: docker run -v `pwd`:/opt/app/examples mnetools/mne-python python /opt/app/examples/tests/test.py
