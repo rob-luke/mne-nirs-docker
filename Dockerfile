@@ -24,6 +24,12 @@ RUN chmod 777 /opt
 
 # setup mne user
 RUN useradd -ms /bin/bash -d ${HOME_DIR} ${MNE_USER}
+
+# Copy examples across
+COPY examples /home/mne_user/examples
+RUN chmod -R 777 /home/mne_user/examples
+RUN chown ${MNE_USER} /home/mne_user/examples
+
 USER $MNE_USER
 WORKDIR $HOME_DIR
 
@@ -67,8 +73,5 @@ RUN pip install https://github.com/mne-tools/mne-nirs/archive/master.zip
 ENV \
     MNE_3D_BACKEND=pyvista \
     MNE_3D_OPTION_ANTIALIAS=false
-
-COPY examples /home/mne_user/examples
-RUN chmod -R 777 /home/mne_user/examples
 
 ENTRYPOINT ["tini", "-g", "--", "/usr/bin/prepare.sh"]
