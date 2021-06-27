@@ -21,6 +21,13 @@ To pull the latest image use:
 docker pull ghcr.io/rob-luke/mne-nirs/image:latest
 ```
 
+If you wish to mount a local directory:
+
+```bash
+docker run -d -p 8888:8888 -v `pwd`:/home/mne_user/external ghcr.io/rob-luke/mne-nirs/image jupyter-lab --ip 0.0.0.0
+```
+
+
 ## Versions
 
 Tags will be built according to the versioning of MNE-NIRS.
