@@ -5,7 +5,7 @@
 [![Release](https://github.com/rob-luke/mne-nirs-docker/actions/workflows/release.yml/badge.svg)](https://github.com/rob-luke/mne-nirs-docker/actions/workflows/release.yml)
 
 This provides a [docker](https://docs.docker.com/get-docker/) container for running [MNE-Python](https://mne.tools/stable/index.html) and [MNE-NIRS](https://mne.tools/mne-nirs/master/index.html) with full 3d visualisation capabilities.
-It is also used as the basis for a binder image. Binder allows you to run notebooks in the cloud with no local installation.
+It is also used as the basis for a [binder](https://mybinder.org/) image. Binder allows you to run notebooks in the cloud with no local installation.
 
 ## Usage
 
