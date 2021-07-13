@@ -24,7 +24,7 @@ docker pull ghcr.io/rob-luke/mne-nirs/image:latest
 If you wish to mount a local directory:
 
 ```bash
-docker run -p 8888:8888 -v `pwd`:/home/mne_user/external ghcr.io/rob-luke/mne-nirs/image jupyter-lab --ip 0.0.0.0
+docker run -p 8888:8888 -v `pwd`:/home/mne_user ghcr.io/rob-luke/mne-nirs/image jupyter-lab --ip 0.0.0.0
 ```
 
 
