@@ -15,13 +15,13 @@ To start a jupyter lab server with the latest image and allow access from any IP
 docker run -p 8888:8888 ghcr.io/rob-luke/mne-nirs/image:latest jupyter-lab --ip="*"
 ```
 
-To pull the latest image use:
+If you have been using a previous version and want to update to the latest, then pull the latest image using:
 
 ```bash
 docker pull ghcr.io/rob-luke/mne-nirs/image:latest
 ```
 
-If you wish to mount a local directory on a \*nix or mac:
+If you wish to mount a local directory (useful for processing your own files and scripts) on a \*nix or mac:
 
 ```bash
 docker run -p 8888:8888 -v `pwd`:/home/mne_user ghcr.io/rob-luke/mne-nirs/image jupyter-lab --ip="*"
