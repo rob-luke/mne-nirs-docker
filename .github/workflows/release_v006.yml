@@ -1,0 +1,31 @@
+name: Release v0.0.6
+
+on: [workflow_dispatch]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build docker image
+        run: DOCKER_BUILDKIT=1 docker build --build-arg mne_nirs_v=v0.0.6 --progress=plain -t ghcr.io/${GITHUB_REPOSITORY}/${GITHUB_REF##*/} .
+
+      - name: Tag image
+        run: docker tag ghcr.io/${GITHUB_REPOSITORY}/${GITHUB_REF##*/} ghcr.io/rob-luke/mne-nirs/image:v0.0.6
+
+      - name: Push image to github
+        run: docker push ghcr.io/rob-luke/mne-nirs/image:v0.0.6
+
+      - name: System info
+        run: docker run ghcr.io/rob-luke/mne-nirs/image:v0.0.6 python -c "import mne_nirs; print(mne_nirs.__version__)"
