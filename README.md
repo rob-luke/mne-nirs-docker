@@ -13,7 +13,7 @@ This is a great way to get started using MNE-NIRS.
 
 ## Usage
 
-To start a jupyter lab server with the latest image and allow access from any IP address use:
+To start a jupyter lab server with the latest image (and allow access from any IP address) use:
 
 ```bash
 docker run -p 8888:8888 ghcr.io/rob-luke/mne-nirs/image:latest jupyter-lab --ip="*"
