@@ -10,7 +10,7 @@ RUN pip install https://github.com/nilearn/nilearn/archive/${nilearn_v}.zip
 RUN pip install https://codeload.github.com/rob-luke/mne-bids/zip/nirs
 RUN pip install https://github.com/mne-tools/mne-nirs/archive/${mne_nirs_v}.zip
 
-# Copy examples across
+# Copy examples
 COPY examples /home/mne_user/examples
 RUN chmod -R 777 /home/mne_user/examples
 RUN chown ${MNE_USER} /home/mne_user/examples
