@@ -26,3 +26,6 @@ jobs:
 
       - name: Push image to github
         run: docker push ghcr.io/rob-luke/mne-nirs/image:v0.0.6
+
+      - name: System info
+        run: docker run ghcr.io/rob-luke/mne-nirs/image python -c "import mne_nirs; print(mne_nirs.__version__)"
