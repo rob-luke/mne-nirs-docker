@@ -7,6 +7,10 @@
 This provides a [docker](https://docs.docker.com/get-docker/) container for running [MNE-Python](https://mne.tools/stable/index.html) and [MNE-NIRS](https://mne.tools/mne-nirs/master/index.html) with full 3d visualisation capabilities.
 It is also used as the basis for a [binder](https://mybinder.org/) image. Binder allows you to run notebooks in the cloud with no local installation.
 
+Practically, this allows you to run MNE-NIRS code on your computer without installing python or any packages.
+You simply run the command below and a notebook server will be started with all appropriate packages available.
+This is a great way to get started using MNE-NIRS.
+
 ## Usage
 
 To start a jupyter lab server with the latest image and allow access from any IP address use:
@@ -41,8 +45,3 @@ For example, to use MNE-NIRS version v0.0.6 run:
 ```bash
 docker run -p 8888:8888 ghcr.io/rob-luke/mne-nirs/image:v0.0.6 jupyter-lab --ip="*"
 ```
-
-
-## Roadmap
-
-Once MNE-Docker is working robustly I will refactor this to build from that container base.
