@@ -1,4 +1,4 @@
-FROM ghcr.io/mne-tools/mne-python-plot@sha256:b0555124a2f1bb09bbca660764d543e729af14300bcac9499a6fde1e9776f4f7
+FROM ghcr.io/mne-tools/mne-python-plot:main
 
 ARG mne_nirs_v=main
 ARG nilearn_v=main
