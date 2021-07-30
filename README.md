@@ -6,6 +6,7 @@
 
 This provides a [docker](https://docs.docker.com/get-docker/) container for running [MNE-Python](https://mne.tools/stable/index.html) and [MNE-NIRS](https://mne.tools/mne-nirs/master/index.html) with full 3d visualisation capabilities.
 It is also used as the basis for a [binder](https://mybinder.org/) image. Binder allows you to run notebooks in the cloud with no local installation.
+This image is built on top of the official MNE image here: https://github.com/mne-tools/mne-docker.
 
 Practically, this allows you to run MNE-NIRS code on your computer without installing python or any packages.
 You simply run the command below and a notebook server will be started with all appropriate packages available.
