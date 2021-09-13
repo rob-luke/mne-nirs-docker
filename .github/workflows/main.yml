@@ -42,6 +42,9 @@ jobs:
 
       - name: System info
         run: docker run mnetools/mne-python python -c "import mne; mne.sys_info()"
+
+      - name: MNE-NIRS info
+        run: docker run mnetools/mne-python python -c "import mne_nirs; print(mne_nirs.__version__)"
           
       - name: Run visualisation test
         run: docker run -v `pwd`:/opt/app/examples mnetools/mne-python ipython /opt/app/examples/tests/test.py
