@@ -46,3 +46,13 @@ For example, to use MNE-NIRS version v0.0.6 run:
 ```bash
 docker run -p 8888:8888 ghcr.io/rob-luke/mne-nirs/image:v0.0.6 jupyter-lab --ip="*"
 ```
+
+
+## Development
+
+There are several github actions that help with deployment and testing:
+
+* `main.yml` ensure the docker image builds and runs tests against it.
+* `release.yml` releases a `latest` image.
+* `release_vX_Y_Z.yml` releases a vX.Y.Z version of the image.
+* `tags.yml` releases a version when a tag is made and also a latest version (use the manual release options instead).
