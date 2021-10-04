@@ -1,3 +1,6 @@
+# THIS REPOSITORY HAS BEEN ARCHIVED PLEASE USE THE OFFICIAL MNE-NIRS and MNE-DOCKER REPOSITORIES https://github.com/mne-tools/mne-nirs
+
+
 # MNE-NIRS Docker Container with Jupyterlab
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rob-luke/mne-nirs-docker/HEAD)
